@@ -19,8 +19,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <h1>IDVC2</h1>
+      <div className="App">
         <div id="videoCapturingEl"></div>
       </div>
     );
