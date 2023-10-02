@@ -1,29 +1,22 @@
 import React, { Component } from "react";
-import "./App.css";
-import SCANWRAP from "scandoc-onboarding";
 import "scandoc-onboarding/dist/css/onboarding.css";
 
-class App extends Component {
-  constructor() {
-    super();
-  }
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Websdk from "./components/Websdk";
 
-  componentDidMount() {
-    const lib = new SCANWRAP({
-      el: "videoCapturingEl",
+const router = createBrowserRouter([
+  {
+    path: "/embedded",
+    element: <Websdk /> ,
+  },
+  {
+    path: "/",
+    element: <Websdk /> ,
+  },
+]);
 
-      domainApi: process.env.REACT_APP_DOMAIN_API,
-      customerKey: process.env.REACT_APP_CUSTOMER_KEY,
-    });
-  }
-
-  render() {
-    return (
-      <div className="App">
-        <div id="videoCapturingEl"></div>
-      </div>
-    );
-  }
+function App() {
+  return <RouterProvider router={router} />;
 }
 
 export default App;
