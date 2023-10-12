@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "scandoc-onboarding/dist/css/onboarding.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Websdk from "./components/Websdk";

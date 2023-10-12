@@ -1,16 +1,15 @@
 import React, { useEffect } from "react";
-import ScanWrap from "scandoc-onboarding";
-import "scandoc-onboarding/dist/css/onboarding.css";
+import ScanWrap from "@idscan/onboarding";
+import "@idscan/onboarding/dist/css/onboarding.css";
 
 function Websdk() {
   useEffect(() => {
     const lib = new ScanWrap({
       el: "videoCapturingEl",
-      domainApi: process.env.REACT_APP_DOMAIN_API,
-      customerKey: process.env.REACT_APP_CUSTOMER_KEY,
-      domainId: process.env.REACT_APP_DOMAIN_ID,
-      publicKey: process.env.REACT_APP_PUBLIC_KEY,
-      configApi: process.env.REACT_APP_CONFIG_API,
+      applicantId : "6496bcc6-62fd-4064-9bd9-7f1895411ced",
+      domainApi: "https://api-dvsonline.idscan.net",
+      domainId: "45345883-9368-4bab-e8c9-08dbc43ec1fd",
+      publicKey: "pk_93d3442d-251e-4a31-93e0-17b7099b3c6f",
     });
   });
   return (
